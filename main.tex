@@ -26,13 +26,15 @@
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome}
+\usepackage{orcidlink}
+\colorlet{orcidlogocol}{black}
 \usepackage[most]{tcolorbox}
 \usepackage{makecell}
 \usepackage{arydshln}
 
 
 % Set the margins
-\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.2cm}
+\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.6cm}
 
 
 % Sections formatting
@@ -92,9 +94,12 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
 
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumePubItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm,itemsep=1.0mm]\small}
+\newcommand{\resumePubHeading}[1]{\vspace{1mm}\item[] \textbf{#1}\vspace{-2.5mm}}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+\newcommand{\resumePubItemListEnd}{\end{itemize}\end{justify}\vspace{-1mm}}
 
 \renewcommand{\arraystretch}{1}
 
@@ -116,7 +121,7 @@
 \newcommand{\github}{audreymhoughton} %Github
 \newcommand{\website}{https://example.com} %Website
 \newcommand{\linkedin}{audreyhoughton} %linkedin
-\usepackage{academicons}
+\newcommand{\orcid}{0000-0001-9426-7969} %ORCID
 
 
 
@@ -130,27 +135,31 @@
 \vspace{-5mm}
 \begin{center}
     \small{\href{https://github.com/\github}{\faGithub \hspace{0.2mm} github.com/audreymhoughton} |  \href{https://www.linkedin.com/in/\linkedin/}{\faLinkedinSquare \hspace{0.2mm} linkedin.com/in/audreyhoughton} | \href{mailto:\emaila}{\faSend \hspace{0.2mm} \emaila} \\
-    \faPhone \hspace{0.2mm} +1-\phone } | \href{https://scholar.google.com/citations?hl=en&user=ik59nO0AAAAJ&view}{\faGraduationCap Google Scholar}
+    \faPhone \hspace{0.2mm} +1-\phone } | \href{https://scholar.google.com/citations?hl=en&user=ik59nO0AAAAJ&view}{\faGraduationCap Google Scholar} | \orcidlinkc{\orcid}
 \end{center}
 \vspace{-6mm}
-
-\section{Technical Skills}
-\vspace{0.5mm}
+\section{Research Interests}
 \resumeItemListStart
-\item[]\textbf{Programming:} Python, Bash, UNIX/Linux, Git/GitHub, LaTeX, Docker, Singularity
-\item[]\textbf{Infrastructure \& Data:} AWS (S3), Ceph, SLURM, Kubernetes, SQL, ETL pipelines, batch processing, data validation, Globus, Grafana, Prometheus
-\item[]\textbf{Statistics \& Modeling:} logistic regression, predictive modeling, LightGBM, calibration (Platt/isotonic), repeated stratified cross-validation, bootstrap/permutation inference, FDR correction (Benjamini-Hochberg), SHAP interpretability, ROC-AUC/PR-AUC/Brier metrics, causal inference \& discovery, GIS analysis, QGIS visualization, EHR integration, geocoding/FIPS recovery
-\item[]\textbf{Imaging \& ML:} neuroimaging/MRI segmentation, astrophysics photometric reduction, time-domain imaging, deep learning inference workloads and compute planning (e.g., nnU-Net)
-\item[]\textbf{Productivity \& Collaboration:} Jira, Linear, Kanban, Agile/Scrum, SOP documentation, Slack, Microsoft Teams, Google Workspace, Box, Salesforce API automation, compliant web scraping
-\item[]\textbf{Additional Exposure:} Matlab, R, IDL, JavaScript/Node.js, Go, Ansible/AWX, RedHat, ReadTheDocs, Google Apps Script, GCP, Terraform, Datadog, CI/CD (GitHub Actions, CircleCI)
+\item[] Scientific software engineering, astronomical data processing, high-performance computing, machine learning for scientific data analysis, reproducible research workflows, large-scale data pipelines, and computational imaging. My work has contributed to more than 30 scientific publications spanning astronomy, neuroimaging, psychiatry, and scientific software.
 \resumeItemListEnd
-\vspace{-3mm}
+\vspace{-2mm}
+
+\vspace{0mm}
+\section{Education}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{University of Montana - Missoula, MT} 
+{Bachelors of Arts in Physics} 
+{Aug 2013 - May 2017} 
+{\href{https://www.umt.edu/physics-astronomy/}{umt.edu/physics-astronomy}}
+\resumeSubHeadingListEnd
+\vspace{0mm}
 
 \vspace{-2mm}
-%-----------EXPERIENCE-----------------
-\section{Experience}
-\resumeSubHeadingListStart
 
+\section{Research Experience}
+\resumeSubHeadingListStart
 
 \resumeExp
 {University of Minnesota – Department of Psychiatry \& Behavioral Sciences}
@@ -162,9 +171,59 @@
 \item[$\bullet$] Build geospatial feature-engineering workflows in Python/Jupyter for county- and tract-level overlays, geocoding quality control, and FIPS recovery from external APIs
 \item[$\bullet$] Build publication-grade clinical prediction workflows with LightGBM, repeated stratified cross-validation, calibration selection, and bootstrap/permutation robustness checks
 \item[$\bullet$] Lead statistical result interpretation and methods reporting for manuscripts and grant submissions across interdisciplinary teams
-
-
 \resumeItemListEnd
+
+\resumeExp
+{Masonic Institute of the Developing Brain}
+{Research Software Engineer II (promoted to III)}
+{Jan 2021 - Apr 2024}
+{Minneapolis, MN (Remote)}
+\resumeItemListStart
+\item[$\bullet$] Developed Python wrappers leveraging AWS S3 storage and SLURM optimization to accelerate image processing up to 12×.
+\item[$\bullet$] Engineered a containerized infant MRI segmentation application achieving 600× faster processing and improved segmentation accuracy.
+\item[$\bullet$] Built ETL pipelines for petabyte-scale neuroimaging datasets, emphasizing reproducibility and quality control.
+\item[$\bullet$] Authored laboratory documentation and technical curriculum for neuroimaging software and HPC workflows.
+\item[$\bullet$] Co-designed and instructed a three-month MRI Data Processing Workshop covering Bash, Linux, SLURM, BIDS, containers, and MRI analysis workflows.
+\item[$\bullet$] Founded and led weekly Bash training sessions for research staff and students.
+\item[$\bullet$] Founded and organized the interdisciplinary "Brainy Brains" seminar series to promote neuroscience learning across research disciplines.
+\item[$\bullet$] Mentored two University of Minnesota UROP/URA students in MRI data processing and reproducible workflows using ABCD and HCP-YA datasets.
+\item[$\bullet$] Processed and maintained workflows for major neuroimaging cohorts including ABCD, BCP, HCP-Development, HCP-Young Adult, ABIDE I, and ABIDE II.
+\resumeItemListEnd
+
+\resumeExp
+{Rutgers University Astrophysics Department}
+{Research Assistant}
+{May 2016 -- Aug 2016}
+{New Brunswick, NJ}
+\resumeItemListStart
+\item[$\bullet$] Refactored legacy computational astrophysics software from IDL to Python, improving maintainability and accessibility for future research.
+\item[$\bullet$] Developed and optimized galactic collision simulations through parameter estimation and computational modeling.
+\item[$\bullet$] Performed analysis and validation of simulation outputs to evaluate model performance and scientific accuracy.
+\item[$\bullet$] Collaborated with faculty and researchers on computational astrophysics projects using scientific programming and numerical methods.
+\item[$\bullet$] Presented research findings through an oral presentation to faculty and researchers in the Rutgers Department of Physics and Astronomy and a poster presentation at the interdisciplinary Summer Research Symposium Featuring REU and RiSE Scholars.
+\resumeItemListEnd
+
+\resumeExp
+{The MINERVA Project}
+{Research Assistant}
+{Jan 2015 -- May 2017}
+{Missoula, MT}
+\resumeItemListStart
+\item[$\bullet$] Developed a Python-based photometric data reduction pipeline for detecting transiting exoplanets from time-domain FITS imaging data.
+\item[$\bullet$] Implemented CCD calibration workflows, including bias, dark, and flat-field correction, followed by aperture and differential photometry for high-precision light curve generation.
+\item[$\bullet$] Utilized Astropy, Photutils, and the scientific Python ecosystem to automate astronomical image processing, quality control, and photometric analysis.
+\item[$\bullet$] Supported exoplanet transit detection and photometric follow-up as part of the MINERVA exoplanet research program.
+\item[$\bullet$] Collaborated with faculty and student researchers to develop and improve scientific software supporting astronomical research.
+\item[$\bullet$] Presented pipeline development and research results at the 2016 Montana Space Grant Consortium Conference.
+\item[$\bullet$] Developed software supporting published astronomical research, including a refereed journal article and an American Astronomical Society conference abstract.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-2mm}
+
+%-----------PROJECTS-----------------
+\section{Industry Experience}
+\resumeSubHeadingListStart
 
 \resumeExp
 {CoreWeave, Inc.}
@@ -173,25 +232,10 @@
 {Remote}
 \resumeItemListStart
 \item[$\bullet$] Provisioned and operated thousands of NVIDIA GPU nodes in Kubernetes using Ansible, AWX, Grafana, and Go, achieving 1-2 week onboarding and 6+ months average production uptime
-\item[$\bullet$] Diagnosed and resolved hardware/software failures across the node lifecycle, recovering approximately \$250,000 in value per repaired node
+\item[$\bullet$] Diagnosed and resolved hardware and software failures across thousands of GPU compute nodes supporting large-scale AI workloads.
 \item[$\bullet$] Partnered with 10+ teams—including networking, hardware, operations, and support—to streamline troubleshooting, accelerate incident resolution, and document SOPs and post-mortems, improving efficiency and reliability
 \item[$\bullet$] Identified points in the node lifecycle where nodes were lost, implementing solutions that saved the company millions in revenue
 \resumeItemListEnd
-
-
-\resumeExp
-{Masonic Institute of the Developing Brain}
-{Research Software Engineer II (promoted to III)}
-{Jan 2021 - Apr 2024}
-{Minneapolis, MN (Remote)}
-\resumeItemListStart
-\item[$\bullet$] Developed Python wrappers leveraging AWS S3 storage and SLURM optimization to accelerate image processing up to 12x
-\item[$\bullet$] Engineered a containerized infant MRI segmentation application with deep learning models, achieving 600x speed-ups and +53\% accuracy
-\item[$\bullet$] Built ETL-based pipelines to transfer and process petabytes of imaging data 10x faster than prior industry benchmarks, incorporating statistical error analysis and validation to ensure reliability and reproducibility
-\item[$\bullet$] Authored comprehensive documentation and curriculum, setting standards for reproducible neuroimaging data processing
-\resumeItemListEnd
-
-
 
 \resumeExp
 {Calyxt}
@@ -202,33 +246,137 @@
 \item[$\bullet$] Developed Python scripts for laboratory data tracking, quality control, and analysis reporting
 \resumeItemListEnd
 
+\resumeSubHeadingListEnd
+\vspace{-2mm}
 
+\section{Teaching \& Mentoring}
+\resumeSubHeadingListStart
 
 \resumeExp
-{The MINVERA Project}
-{Research Assistant}
-{Jan 2015 - May 2017}
-{Missoula, MT}
+{University of Minnesota Undergraduate Research Opportunities Program (UROP/URA)}
+{Undergraduate Research Mentor}
+{2023}
+{Minneapolis, MN}
 \resumeItemListStart
-\item[$\bullet$] Developed a Python-based photometric data reduction pipeline for detecting transiting exoplanets from time-domain imaging data, including calibration, aperture photometry, and light curve analysis
+\item[$\bullet$] Mentored two undergraduate researchers in neuroimaging data processing.
+\item[$\bullet$] Trained students to process Human Connectome Project Young Adult (HCP-YA) and ABCD MRI datasets.
+\item[$\bullet$] Introduced reproducible workflows and quality-control procedures for large neuroimaging datasets.
 \resumeItemListEnd
 
 \resumeExp
-{Rutgers University Astrophysics Department}
-{Research Assistant}
-{May 2016 - Aug 2016}
-{New Brunswick, NJ}
+{Co-Instructor, MRI Data Processing Workshop}
+{Masonic Institute for the Developing Brain, University of Minnesota}
+{2022}
+{Minneapolis, MN}
 \resumeItemListStart
-\item[$\bullet$] Refactored IDL scripts into Python
-\item[$\bullet$] Built galactic simulation models using parameter optimization
+\item[$\bullet$] Co-designed and taught a three-month workshop introducing students and researchers to neuroimaging data processing and high-performance computing.
+\item[$\bullet$] Developed instructional materials covering Bash/Linux, SLURM, S3 storage, BIDS standards, containers, quality assurance, and reproducible MRI processing workflows.
+\item[$\bullet$] Held weekly office hours and provided technical mentorship to participants from diverse academic backgrounds.
+\item[$\bullet$] The workshop was later adapted into an official University of Minnesota credit-bearing course.
+\resumeItemListEnd
+
+\resumeExp
+{Mathematics Teacher}
+{Imagine Prep Surprise}
+{Jul 2017 - Jul 2018}
+{Surprise, AZ}
+\resumeItemListStart
+\item[$\bullet$] Taught Algebra II, Precalculus, Calculus, and Cambridge AS/A-Level Mathematics to high school students.
+\item[$\bullet$] Developed lesson plans, assessments, and instructional materials.
+\item[$\bullet$] Contributed to improving Algebra proficiency from approximately 11\% to 70\% during my tenure.
+\resumeItemListEnd
+
+\resumeExp
+{Teaching Assistant - Observational Astronomy}
+{University of Montana}
+{Aug 2016 - Dec 2016}
+{Missoula, MT}
+\resumeItemListStart
+\item[$\bullet$] Assisted instruction for the undergraduate Observational Astronomy course.
+\item[$\bullet$] Supervised observing sessions and telescope operations.
+\item[$\bullet$] Delivered a 45-minute lecture on Python-based astronomical data reduction.
+\item[$\bullet$] Assisted students with programming and data analysis assignments.
+\resumeItemListEnd
+
+\resumeExp
+{Mathematics Tutor}
+{Huntington Learning Center}
+{Jul 2019 - Oct 2019}
+{Plymouth, MN}
+\resumeItemListStart
+\item[$\bullet$] Provided one-on-one mathematics tutoring for K-12 students.
+\item[$\bullet$] Adapted instruction to students with varying backgrounds and learning styles.
+\resumeItemListEnd
+
+\resumeExp
+{Mathematics Tutor}
+{Tutor Doctor}
+{Jan 2019 - May 2019}
+{Loveland, CO}
+\resumeItemListStart
+\item[$\bullet$] Delivered individualized mathematics tutoring to middle and high school students.
+\item[$\bullet$] Prepared students for coursework and standardized examinations.
+\resumeItemListEnd
+
+\resumeExp
+{Planetarium Outreach Educator}
+{University of Montana Physics Department}
+{Aug 2015 - May 2017}
+{Missoula, MT}
+\resumeItemListStart
+\item[$\bullet$] Presented public planetarium shows introducing astronomy and physics concepts.
+\item[$\bullet$] Communicated scientific concepts to audiences of all ages.
+\item[$\bullet$] Supported departmental outreach activities to promote STEM education.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{0mm}
+\vspace{-2mm}
 
+\section{Publications}
+\resumeSubHeadingListStart
 
-%-----------PROJECTS-----------------
-\section{Products}
+\resumePubHeading{Peer-Reviewed Journal Articles}
+\resumePubItemListStart
+\item[] Mehta, K., et al. (2024). XCP-D: A robust pipeline for the post-processing of fMRI data. \textit{Imaging Neuroscience}, 2, imag-2-00257.
+\item[] Luo, A. C., et al. (2024). Functional connectivity development along the sensorimotor-association axis enhances the cortical hierarchy. \textit{Nature Communications}, 15(1), 3511.
+\item[] Keller, A. S., et al. (2023). Personalized functional brain network topography is associated with individual differences in youth cognition. \textit{Nature Communications}, 14(1), 8411.
+\item[] Pines, A., et al. (2023). Development of top-down cortical propagations in youth. \textit{Neuron}, 111(8), 1316-1330.
+\item[] Keller, A. S., et al. (2024). A general exposome factor explains individual differences in functional brain network topography and cognition in youth. \textit{Developmental Cognitive Neuroscience}, 66, 101370.
+\item[] Covitz, S., et al. (2022). Curation of BIDS (CuBIDS): A workflow and software package for streamlining reproducible curation of large BIDS datasets. \textit{NeuroImage}, 263, 119609.
+\item[] Wilson, M. L., et al. (2019). First radial velocity results from the miniature exoplanet radial velocity array (MINERVA). \textit{Publications of the Astronomical Society of the Pacific}, 131(1005), 115001.
+\item[] Zhao, C., et al. (2024). A reproducible and generalizable software workflow for analysis of large-scale neuroimaging data collections using BIDS apps. \textit{Imaging Neuroscience}, 2, imag-2-00074.
+\item[] Byington, N., et al. (2023). Polyneuro risk scores capture widely distributed connectivity patterns of cognition. \textit{Developmental Cognitive Neuroscience}, 60, 101231.
+\item[] Shafiei, G., et al. (2024). Generalizable links between borderline personality traits and functional connectivity. \textit{Biological Psychiatry}, 96(6), 486-494.
+\item[] Holt-Gosselin, B., et al. (2024). Familial risk for depression moderates neural circuitry in healthy preadolescents to predict adolescent depression symptoms in the Adolescent Brain Cognitive Development (ABCD) study. \textit{Developmental Cognitive Neuroscience}, 68, 101400.
+\item[] Feczko, E., et al. (2025). Baby Open Brains: An open-source dataset of infant brain segmentations. \textit{Scientific Data}, 12(1), 1423.
+\item[] Giovinazzi, M. R., et al. (2020). The HD 217107 planetary system: Twenty years of radial velocity measurements. \textit{Astronomische Nachrichten}, 341(9), 870-878.
+\resumePubItemListEnd
+
+\resumePubHeading{Conference Proceedings \& Abstracts}
+\resumePubItemListStart
+\item[] Shang, Z., et al. (2022). Learning strategies for contrast-agnostic segmentation via SynthSeg for infant MRI data. In \textit{Proceedings of the International Conference on Medical Imaging with Deep Learning} (pp. 1075-1084).
+\item[] Richie-Halford, A., et al. (2022). NiRV: The neuroimaging report viewer. In \textit{Proceedings of the Organization for Human Brain Mapping}.
+\item[] Houghton, A., et al. (2017). Project MINERVA's follow-up on wide-field, small telescope photometry to identify exoplanets. \textit{American Astronomical Society Meeting Abstracts}, 229, 146.08.
+\item[] Keller, A., et al. (2024). Understanding cognitive development by capturing complex, multidimensional, childhood environments and individual-specific patterns of functional brain network organization. \textit{Biological Psychiatry}, S85.
+\item[] Keller, A., et al. (2023). Highlighting the role of multidimensional childhood environments in functional brain network organization and cognitive development. \textit{Neuropsychopharmacology}, 48, 134-135.
+\item[] Bertolero, M., et al. (2022). Multivariate patterns of functional connectivity are linked to borderline-spectrum symptoms in young adulthood and youth. \textit{Biological Psychiatry}, 91(9), S170-S171.
+\resumePubItemListEnd
+
+\resumePubHeading{Preprints \& Manuscripts}
+\resumePubItemListStart
+\item[] Goncalves, M., et al. (2025). FMRIPrep Lifespan: Extending a robust pipeline for functional MRI preprocessing to developmental neuroimaging. \textit{bioRxiv}.
+\item[] Feczko, E., et al. (2024). Baby Open Brains: An open-source repository of infant brain segmentations. \textit{bioRxiv}.
+\item[] Coffman, C., et al. (2024). Heritability estimation of subcortical volumes in a multi-ethnic multi-site cohort study. \textit{bioRxiv}.
+\item[] Shafiei, G., et al. (2023). Generalizable links between symptoms of borderline personality disorder and functional connectivity. \textit{bioRxiv}.
+\item[] Randolph, A. C., et al. (2026). Mental health outcomes of foster and adopted individuals with adverse childhood experiences: A validation of known risks using EHR data. \textit{medRxiv}, 2026.05.28.26354276.
+\item[] Caola, L., et al. (2026). Before birth, beyond childhood: Understanding the influence of prenatal substance exposure on psychiatric diagnoses. \textit{medRxiv}, 2026.05.27.26354275.
+\item[] Mahmoudi, M., et al. (2026). Cortical thickness and curvature in autism and ADHD: A mega-analysis. \textit{bioRxiv}.
+\resumePubItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-2mm}
+
+\section{Research Software}
 \resumeSubHeadingListStart
 
 \resumeProject
@@ -240,7 +388,6 @@
 \item[$\bullet$] Built a proof-of-concept pipeline integrating Salesforce logging, CSV rotation, and Microsoft Teams alerts with compliant web scraping (robots.txt, throttling, retries)
 \resumeItemListEnd
 
-
 \resumeProject
 {CoreWeave Internal Documentation} 
 {CoreWeave, Inc.} 
@@ -249,7 +396,6 @@
 \resumeItemListStart
 \item[$\bullet$] Initiated and built company-wide documentation from the ground up, replacing scattered one-off documents with an organized, centralized Notion knowledge base covering terminology, SOPs, and team workflows
 \resumeItemListEnd
-
 
 \resumeProject
 {SLURM Wrappers} 
@@ -269,7 +415,6 @@
 \item[$\bullet$] Community dataset enabling access to petabytes of processed/unprocessed MRI data under BIDS standards
 \resumeItemListEnd
 
-
 \resumeProject
 {DCAN Labs Informational Guide} %Project Name
 {Minnesota Supercomputing Institute Data Engineering Documentation} %Project Name, Location Name
@@ -288,7 +433,6 @@
 \item[$\bullet$] Python-based universal container-linking wrapper employing FAIR principles
 \resumeItemListEnd
 
-
 \resumeProject
 {BIBSNet} 
 {Infant MRI Brain Segmentation Application} 
@@ -298,53 +442,53 @@
 \item[$\bullet$] Containerized infant MRI application; achieved 600x faster processing and +53\% accuracy
 \resumeItemListEnd
 
-
-
 \resumeSubHeadingListEnd
 
+\section{Technical Skills}
+\vspace{0.5mm}
+\resumeItemListStart
+\item[]\textbf{Programming:} Python, Bash, UNIX/Linux, Git/GitHub, LaTeX, Docker, Singularity
+\item[]\textbf{Infrastructure \& Data:} AWS (S3), Ceph, SLURM, Kubernetes, SQL, ETL pipelines, batch processing, data validation, Globus, Grafana, Prometheus
+\item[]\textbf{Statistics \& Modeling:} logistic regression, predictive modeling, LightGBM, calibration (Platt/isotonic), repeated stratified cross-validation, bootstrap/permutation inference, FDR correction (Benjamini-Hochberg), SHAP interpretability, ROC-AUC/PR-AUC/Brier metrics, causal inference \& discovery, GIS analysis, QGIS visualization, EHR integration, geocoding/FIPS recovery
+\item[]\textbf{Scientific Imaging \& ML:} Neuroimaging/MRI segmentation, astronomical image processing (FITS, Astropy, Photutils), CCD calibration, differential photometry, time-domain imaging, deep learning inference workloads and compute planning (e.g., nnU-Net)
+\item[]\textbf{Productivity \& Collaboration:} Jira, Linear, Kanban, Agile/Scrum, SOP documentation, Slack, Microsoft Teams, Google Workspace, Box, Salesforce API automation, compliant web scraping
+\item[]\textbf{Additional Exposure:} Matlab, R, IDL, JavaScript/Node.js, Go, Ansible/AWX, RedHat, ReadTheDocs, Google Apps Script, GCP, Terraform, Datadog, CI/CD (GitHub Actions, CircleCI)
+\resumeItemListEnd
+\vspace{-3mm}
 
+\section{Leadership \& Service}
+\resumeItemListStart
+\item[] \textbf{Founder \& Organizer, Brainy Brains Seminar Series} \\
+\textit{Masonic Institute for the Developing Brain, University of Minnesota} | 2022--2024 \\
+\hspace*{1.5em}$\bullet$ Founded and led a weekly interdisciplinary seminar where researchers from diverse backgrounds learned and presented topics in neuroscience. \\
+\hspace*{1.5em}$\bullet$ Fostered cross-disciplinary collaboration and scientific communication across the laboratory.
+\item[] \textbf{Founder \& Organizer, Weekly Bash Training Series} \\
+\textit{Masonic Institute for the Developing Brain, University of Minnesota} | 2021--2024 \\
+\hspace*{1.5em}$\bullet$ Founded and led weekly Bash and Linux training sessions for researchers and students. \\
+\hspace*{1.5em}$\bullet$ Developed instructional materials covering command-line computing, scripting, and high-performance computing workflows. \\
+\hspace*{1.5em}$\bullet$ Improved computational proficiency across the laboratory by providing hands-on technical instruction and ongoing support.
+\item[] \textbf{Vice President, Society of Physics Students} \\
+University of Montana | 2016--2017
+\item[] \textbf{Founding Member, Women in Physics} \\
+University of Montana
+\item[] \textbf{Selected Participant, Rutgers University Undergraduate Summer Exchange Program}
+\item[] \textbf{Recipient, University of Montana Global Leadership Initiative Award}
+\resumeItemListEnd
+\vspace{-2mm}
 
-%\section{Papers}
-%\vspace{0.2mm}
-%\small{\begin{tabular*}{\textwidth}[t]{p{0.22\textwidth} p{0.68\textwidth}@{\extracolsep{\fill}}r}
+\section{Conference Presentations}
+\resumeItemListStart
+\item[] \textbf{Poster Presentation}, Montana Space Grant Consortium Conference, 2016. Presented research on the development of a Python pipeline for Project MINERVA.
+\item[] \textbf{Poster Presentation}, Flux Congress, 2023. Presented CABINET, a container-linking wrapper for reproducible neuroimaging workflows.
+\resumeItemListEnd
+\vspace{-2mm}
 
-
-%\resumeAchieve{Achivement 1}{Description}{2022}
-
-%\resumeAchieve{Achivement 2}{Description}{2022}
-
-%\resumeAchieve{Achivement 3}{Description}{2022}
-
-%\resumeAchieve{Achivement 4}{Description}{2022}
-
-%\end{tabular*}}
-
-%\vspace{-2.5mm}
-
-
-
-%-----------EDUCATION-----------------
-
-\vspace{0mm}
-\section{Education}
-
-\resumeSubHeadingListStart
-\resumeEdu
-{University of Montana - Missoula, MT} 
-{Bachelors of Arts in Physics} 
-{Aug 2013 - May 2017} 
-{\href{https://www.umt.edu/physics-astronomy/}{umt.edu/physics-astronomy}}
-\resumeSubHeadingListEnd
-\vspace{0mm}
-
-\resumeSubHeadingListStart
-\resumeEdu
-{University of Minnesota} 
-{Data Management Series; Project Management Certificate Coursework} 
-{2023} 
-{}
-\resumeSubHeadingListEnd
-
+\section{Professional Development}
+\resumeItemListStart
+\item[] \textbf{Leading on All Levels}, University of Minnesota (2021)
+\item[] \textbf{Project Management Certificate Coursework}, University of Minnesota (2023)
+\item[] \textbf{Data Management Series}, University of Minnesota (2023)
+\resumeItemListEnd
 \vspace{-2mm}
 
 %-------------------------------------------

@@ -65,12 +65,12 @@
 
 
 \newcommand{\resumeProject}[4]{
-\vspace{3mm}\item[]
+\vspace{2mm}\item[]
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \hspace{-4.4mm} \small\textbf{#1} \vspace{0mm} & {\footnotesize{#3}}\vspace{-1mm}\\
         \hspace{-4.3mm} \footnotesize{\text{#2}}\vspace{2mm} & \footnotesize{#4} \vspace{0mm}
     \end{tabular*}
-    \vspace{-6mm}
+    \vspace{-5mm}
 }
 
 \newcommand{\resumeEdu}[4]{
@@ -96,8 +96,9 @@
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
 \newcommand{\resumePubItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm,itemsep=1.0mm]\small}
 \newcommand{\resumePubHeading}[1]{\vspace{1mm}\item[] \textbf{#1}\vspace{-2.5mm}}
+\newcommand{\resumeProjectSectionHeading}[1]{\vspace{1mm}\item[] {\large\textbf{#1}}\vspace{-2.5mm}}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-1mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
 \newcommand{\resumePubItemListEnd}{\end{itemize}\end{justify}\vspace{-1mm}}
 
@@ -140,7 +141,7 @@
 \vspace{-6mm}
 \section{Research Interests}
 \resumeItemListStart
-\item[] Scientific software engineering, astronomical data processing, high-performance computing, machine learning for scientific data analysis, reproducible research workflows, large-scale data pipelines, and computational imaging. My work has contributed to more than 30 scientific publications spanning astronomy, neuroimaging, psychiatry, and scientific software.
+\item[] Scientific software engineering, reproducible computational workflows, astronomical data processing, geospatial analysis, high-performance computing, causal inference, machine learning for scientific data analysis, and large-scale data pipelines. Contributed to more than 30 scientific publications spanning astronomy, neuroimaging, psychiatry, and scientific software.
 \resumeItemListEnd
 \vspace{-2mm}
 
@@ -167,10 +168,10 @@
 {Dec 2025 - Present}
 {Minneapolis, MN (Remote)}
 \resumeItemListStart
-\item[$\bullet$] Develop and maintain Python analysis pipelines for GIS-linked electronic health record data in psychiatric research
-\item[$\bullet$] Build geospatial feature-engineering workflows in Python/Jupyter for county- and tract-level overlays, geocoding quality control, and FIPS recovery from external APIs
-\item[$\bullet$] Build publication-grade clinical prediction workflows with LightGBM, repeated stratified cross-validation, calibration selection, and bootstrap/permutation robustness checks
-\item[$\bullet$] Lead statistical result interpretation and methods reporting for manuscripts and grant submissions across interdisciplinary teams
+\item[$\bullet$] Develop and maintain Python analysis pipelines for GIS-linked electronic health record data in psychiatric research.
+\item[$\bullet$] Build geospatial feature-engineering workflows in Python/Jupyter for county- and tract-level overlays, geocoding quality control, and FIPS recovery from external APIs.
+\item[$\bullet$] Build publication-grade clinical prediction workflows with LightGBM, repeated stratified cross-validation, calibration selection, and bootstrap/permutation robustness checks.
+\item[$\bullet$] Lead statistical result interpretation and methods reporting for manuscripts and grant submissions across interdisciplinary teams.
 \resumeItemListEnd
 
 \resumeExp
@@ -231,10 +232,10 @@
 {Apr 2024 - Sept 2024}
 {Remote}
 \resumeItemListStart
-\item[$\bullet$] Provisioned and operated thousands of NVIDIA GPU nodes in Kubernetes using Ansible, AWX, Grafana, and Go, achieving 1-2 week onboarding and 6+ months average production uptime
+\item[$\bullet$] Provisioned and operated thousands of NVIDIA GPU nodes in Kubernetes using Ansible, AWX, Grafana, and Go, achieving 1-2 week onboarding and 6+ months average production uptime.
 \item[$\bullet$] Diagnosed and resolved hardware and software failures across thousands of GPU compute nodes supporting large-scale AI workloads.
-\item[$\bullet$] Partnered with 10+ teams—including networking, hardware, operations, and support—to streamline troubleshooting, accelerate incident resolution, and document SOPs and post-mortems, improving efficiency and reliability
-\item[$\bullet$] Identified points in the node lifecycle where nodes were lost, implementing solutions that saved the company millions in revenue
+\item[$\bullet$] Partnered with 10+ teams—including networking, hardware, operations, and support—to streamline troubleshooting, accelerate incident resolution, and document SOPs and post-mortems, improving efficiency and reliability.
+\item[$\bullet$] Identified points in the node lifecycle where nodes were lost, implementing improvements that saved the company millions in revenue.
 \resumeItemListEnd
 
 \resumeExp
@@ -243,7 +244,7 @@
 {Oct 2019 - Aug 2020}
 {Roseville, MN}
 \resumeItemListStart
-\item[$\bullet$] Developed Python scripts for laboratory data tracking, quality control, and analysis reporting
+\item[$\bullet$] Developed Python scripts for laboratory data tracking, quality control, and analysis reporting.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -287,7 +288,7 @@
 \resumeItemListEnd
 
 \resumeExp
-{Teaching Assistant - Observational Astronomy}
+{Teaching Assistant, Observational Astronomy}
 {University of Montana}
 {Aug 2016 - Dec 2016}
 {Missoula, MT}
@@ -299,7 +300,7 @@
 \resumeItemListEnd
 
 \resumeExp
-{Mathematics Tutor}
+{Mathematics Instructor}
 {Huntington Learning Center}
 {Jul 2019 - Oct 2019}
 {Plymouth, MN}
@@ -309,7 +310,7 @@
 \resumeItemListEnd
 
 \resumeExp
-{Mathematics Tutor}
+{Mathematics Instructor}
 {Tutor Doctor}
 {Jan 2019 - May 2019}
 {Loveland, CO}
@@ -376,25 +377,41 @@
 \resumeSubHeadingListEnd
 \vspace{-2mm}
 
-\section{Research Software}
-\resumeSubHeadingListStart
-
-\resumeProject
-{Sales Summary Pipeline} 
-{Independent Automation Project} 
-{2025} 
-{[Proprietary]}
+\section{Selected Software Projects}
 \resumeItemListStart
-\item[$\bullet$] Built a proof-of-concept pipeline integrating Salesforce logging, CSV rotation, and Microsoft Teams alerts with compliant web scraping (robots.txt, throttling, retries)
+\resumeProjectSectionHeading{Research Pipelines}
+\resumeSubHeadingListStart
+\resumeProject
+{GIS Analysis Pipeline} 
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
+{2026} 
+{[Research Software]}
+\resumeItemListStart
+\item[$\bullet$] Developed a reproducible geospatial analysis pipeline integrating county- and tract-level social determinants of health with electronic health record data.
+\item[$\bullet$] Automated geocoding quality control, FIPS recovery, census tract matching, and feature engineering using Python and external GIS APIs.
+\item[$\bullet$] Supported publication-quality geospatial analyses and interactive visualizations for psychiatric epidemiology research.
+\item[$\bullet$] Integrated Census tract and county-level indices (e.g., SVI, ADI) with electronic health record data to support reproducible spatial epidemiology analyses.
 \resumeItemListEnd
 
 \resumeProject
-{CoreWeave Internal Documentation} 
-{CoreWeave, Inc.} 
-{2024} 
-{[Proprietary]}
+{Clinical Prediction Analysis Framework} 
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
+{2026} 
+{[Research Software]}
 \resumeItemListStart
-\item[$\bullet$] Initiated and built company-wide documentation from the ground up, replacing scattered one-off documents with an organized, centralized Notion knowledge base covering terminology, SOPs, and team workflows
+\item[$\bullet$] Transformed an existing psychiatric prediction pipeline into a modular, reproducible research framework by expanding functionality, standardizing workflows, and improving usability in accordance with FAIR software principles.
+\item[$\bullet$] Implemented automated repeated stratified cross-validation, LightGBM modeling, probability calibration, bootstrap/permutation robustness checks, SHAP interpretation, and publication-ready statistical reporting.
+\item[$\bullet$] Supported multiple psychiatric prediction studies through reusable, publication-ready software workflows.
+\resumeItemListEnd
+
+\resumeProject
+{Causal Learning Pipeline} 
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
+{2026} 
+{[Research Software]}
+\resumeItemListStart
+\item[$\bullet$] Built a reusable Python pipeline integrating multiple causal discovery algorithms, graph visualization, effect estimation, and reproducible statistical workflows for psychiatric EHR analyses.
+\item[$\bullet$] Standardized preprocessing, graph generation, and downstream statistical analyses to support consistent comparison across causal learning methods.
 \resumeItemListEnd
 
 \resumeProject
@@ -403,25 +420,7 @@
 {2021 - 2024} 
 {\href{https://github.com/DCAN-Labs/SLURM_wrappers}{github.com/DCAN-Labs/SLURM\_wrappers}}
 \resumeItemListStart
-\item[$\bullet$] Bash/Python wrappers adaptable to any SLURM-based data pipeline
-\resumeItemListEnd
-
-\resumeProject
-{ABCD Study Collection 3165 Data Processing} 
-{NIH Data Archive (NDA)} 
-{2021 - 2024} 
-{\href{https://collection3165.readthedocs.io/en/stable/}{collection3165.readthedocs.io}}
-\resumeItemListStart
-\item[$\bullet$] Community dataset enabling access to petabytes of processed/unprocessed MRI data under BIDS standards
-\resumeItemListEnd
-
-\resumeProject
-{DCAN Labs Informational Guide} %Project Name
-{Minnesota Supercomputing Institute Data Engineering Documentation} %Project Name, Location Name
-{2022 - 2024} %Event Dates
-{\href{https://dcan-labs-informational-guide.readthedocs.io/en/latest/}{dcan-labs-informational-guide.readthedocs.io}} %Website
-\resumeItemListStart
-\item[$\bullet$] Comprehensive, continually-supported documentation of usage of the Minnesota Supercomputing Institute to process, analyze, and transfer MRI data
+\item[$\bullet$] Bash/Python wrappers adaptable to any SLURM-based data pipeline.
 \resumeItemListEnd
 
 \resumeProject
@@ -430,7 +429,7 @@
 {2022 - 2023} %Event Dates
 {\href{https://github.com/DCAN-Labs/CABINET}{github.com/DCAN-Labs/CABINET}} %Website
 \resumeItemListStart
-\item[$\bullet$] Python-based universal container-linking wrapper employing FAIR principles
+\item[$\bullet$] Python-based universal container-linking wrapper employing FAIR principles.
 \resumeItemListEnd
 
 \resumeProject
@@ -439,25 +438,69 @@
 {2022 - 2023} 
 {\href{https://github.com/DCAN-Labs/BIBSnet}{github.com/DCAN-Labs/BIBSnet}}
 \resumeItemListStart
-\item[$\bullet$] Containerized infant MRI application; achieved 600x faster processing and +53\% accuracy
+\item[$\bullet$] Containerized infant MRI application; achieved 600x faster processing and +53\% accuracy.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeProjectSectionHeading{Research Infrastructure}
+\resumeSubHeadingListStart
+\resumeProject
+{ABCD Study Collection 3165 Data Processing} 
+{NIH Data Archive (NDA)} 
+{2021 - 2024} 
+{\href{https://collection3165.readthedocs.io/en/stable/}{collection3165.readthedocs.io}}
+\resumeItemListStart
+\item[$\bullet$] Community dataset enabling access to petabytes of processed/unprocessed MRI data under BIDS standards.
+\resumeItemListEnd
+
+\resumeProject
+{DCAN Labs Informational Guide} %Project Name
+{Minnesota Supercomputing Institute Data Engineering Documentation} %Project Name, Location Name
+{2022 - 2024} %Event Dates
+{\href{https://dcan-labs-informational-guide.readthedocs.io/en/latest/}{dcan-labs-informational-guide.readthedocs.io}} %Website
+\resumeItemListStart
+\item[$\bullet$] Comprehensive, continually-supported documentation of usage of the Minnesota Supercomputing Institute to process, analyze, and transfer MRI data.
+\resumeItemListEnd
+
+\resumeProject
+{CoreWeave Internal Documentation} 
+{CoreWeave, Inc.} 
+{2024} 
+{[Proprietary]}
+\resumeItemListStart
+\item[$\bullet$] Initiated and built company-wide documentation from the ground up, replacing scattered one-off documents with an organized, centralized Notion knowledge base covering terminology, SOPs, and team workflows.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeProjectSectionHeading{Independent Projects}
+\resumeSubHeadingListStart
+\resumeProject
+{Waste Not} 
+{Sustainability Application} 
+{2018 - 2022} 
+{[Independent Project]}
+\resumeItemListStart
+\item[$\bullet$] Designed and developed a sustainability application using a nationwide, self-curated recycling database created through large-scale web scraping, data normalization, and categorization.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+\resumeItemListEnd
 
 \section{Technical Skills}
-\vspace{0.5mm}
-\resumeItemListStart
-\item[]\textbf{Programming:} Python, Bash, UNIX/Linux, Git/GitHub, LaTeX, Docker, Singularity
-\item[]\textbf{Infrastructure \& Data:} AWS (S3), Ceph, SLURM, Kubernetes, SQL, ETL pipelines, batch processing, data validation, Globus, Grafana, Prometheus
-\item[]\textbf{Statistics \& Modeling:} logistic regression, predictive modeling, LightGBM, calibration (Platt/isotonic), repeated stratified cross-validation, bootstrap/permutation inference, FDR correction (Benjamini-Hochberg), SHAP interpretability, ROC-AUC/PR-AUC/Brier metrics, causal inference \& discovery, GIS analysis, QGIS visualization, EHR integration, geocoding/FIPS recovery
-\item[]\textbf{Scientific Imaging \& ML:} Neuroimaging/MRI segmentation, astronomical image processing (FITS, Astropy, Photutils), CCD calibration, differential photometry, time-domain imaging, deep learning inference workloads and compute planning (e.g., nnU-Net)
-\item[]\textbf{Productivity \& Collaboration:} Jira, Linear, Kanban, Agile/Scrum, SOP documentation, Slack, Microsoft Teams, Google Workspace, Box, Salesforce API automation, compliant web scraping
+\vspace{0.7mm}
+\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.2mm, topsep=1.5mm]\small
+\item[]\textbf{Programming:} Python, Bash, UNIX/Linux, Git/GitHub, LaTeX, Docker, Singularity, SQL
+\item[]\textbf{Infrastructure \& HPC:} AWS (S3), Ceph, SLURM, Kubernetes, batch processing, data validation, Globus, Grafana, Prometheus, HPC workflow design
+\item[]\textbf{Machine Learning \& Statistics:} logistic regression, predictive modeling, LightGBM, calibration (Platt/isotonic), repeated stratified cross-validation, bootstrap/permutation inference, FDR correction (Benjamini-Hochberg), SHAP interpretability, ROC-AUC/PR-AUC/Brier metrics, causal inference \& discovery
+\item[]\textbf{Scientific Computing:} neuroimaging/MRI segmentation, astronomical image processing (FITS, Astropy, Photutils), CCD calibration, differential photometry, time-domain imaging, deep learning inference workloads and compute planning, GIS analysis, QGIS visualization, geocoding/FIPS recovery
+\item[]\textbf{Data Engineering:} ETL pipelines, EHR integration, census tract and county-level feature engineering, data harmonization, reproducible research workflows, workflow automation
+\item[]\textbf{Collaboration:} Jira, Linear, Kanban, Agile/Scrum, SOP documentation, Slack, Microsoft Teams, Google Workspace, Box, Salesforce API automation, compliant web scraping
 \item[]\textbf{Additional Exposure:} Matlab, R, IDL, JavaScript/Node.js, Go, Ansible/AWX, RedHat, ReadTheDocs, Google Apps Script, GCP, Terraform, Datadog, CI/CD (GitHub Actions, CircleCI)
-\resumeItemListEnd
-\vspace{-3mm}
+\end{itemize}\end{justify}
+\vspace{-1mm}
 
 \section{Leadership \& Service}
-\resumeItemListStart
+\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.5mm, topsep=2mm]\small
 \item[] \textbf{Founder \& Organizer, Brainy Brains Seminar Series} \\
 \textit{Masonic Institute for the Developing Brain, University of Minnesota} | 2022--2024 \\
 \hspace*{1.5em}$\bullet$ Founded and led a weekly interdisciplinary seminar where researchers from diverse backgrounds learned and presented topics in neuroscience. \\
@@ -473,23 +516,23 @@ University of Montana | 2016--2017
 University of Montana
 \item[] \textbf{Selected Participant, Rutgers University Undergraduate Summer Exchange Program}
 \item[] \textbf{Recipient, University of Montana Global Leadership Initiative Award}
-\resumeItemListEnd
-\vspace{-2mm}
+\end{itemize}\end{justify}
+\vspace{-1mm}
 
 \section{Conference Presentations}
-\resumeItemListStart
+\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.2mm, topsep=1.5mm]\small
 \item[] \textbf{Poster Presentation}, Montana Space Grant Consortium Conference, 2016. Presented research on the development of a Python pipeline for Project MINERVA.
 \item[] \textbf{Poster Presentation}, Flux Congress, 2023. Presented CABINET, a container-linking wrapper for reproducible neuroimaging workflows.
-\resumeItemListEnd
-\vspace{-2mm}
+\end{itemize}\end{justify}
+\vspace{-1mm}
 
 \section{Professional Development}
-\resumeItemListStart
+\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.2mm, topsep=1.5mm]\small
 \item[] \textbf{Leading on All Levels}, University of Minnesota (2021)
 \item[] \textbf{Project Management Certificate Coursework}, University of Minnesota (2023)
 \item[] \textbf{Data Management Series}, University of Minnesota (2023)
-\resumeItemListEnd
-\vspace{-2mm}
+\end{itemize}\end{justify}
+\vspace{-1mm}
 
 %-------------------------------------------
 \end{document}

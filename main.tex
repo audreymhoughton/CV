@@ -49,7 +49,7 @@
 \newcommand{\resumePOR}[3]{
 \vspace{0.5mm}\item[]
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2 
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-2.9mm}#2
     \end{tabular*}
     \vspace{0mm}
 }
@@ -139,26 +139,25 @@
     \faPhone \hspace{0.2mm} +1-\phone } | \href{https://scholar.google.com/citations?hl=en&user=ik59nO0AAAAJ&view}{\faGraduationCap Google Scholar} | \orcidlinkc{\orcid}
 \end{center}
 \vspace{-6mm}
-\section{Research Interests}
+\section{Professional Summary}
 \resumeItemListStart
-\item[] Scientific software engineering, reproducible computational workflows, astronomical data processing, geospatial analysis, high-performance computing, causal inference, machine learning for scientific data analysis, and large-scale data pipelines. Contributed to more than 30 scientific publications spanning astronomy, neuroimaging, psychiatry, and scientific software.
+\item[] Scientific software and research computing engineer with 5+ years of experience developing Python-based data pipelines and reproducible computational workflows for biomedical and scientific research. Experienced in Linux/HPC environments, SLURM, AWS S3/Ceph, Docker/Singularity/Apptainer, Kubernetes, ETL, and large-scale multi-site neuroimaging data including ABCD and HCP. Background spans research software engineering, cloud/GPU infrastructure, machine learning, and scientific data operations. Contributed to more than 30 scientific publications spanning astronomy, neuroimaging, psychiatry, and scientific software.
 \resumeItemListEnd
 \vspace{-2mm}
 
+\section{Technical Skills}
+\vspace{0.7mm}
+\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.2mm, topsep=1.5mm]\small
+\item[]\textbf{Programming \& Systems:} Python, Bash/Shell, R, SQL, UNIX/Linux, Git/GitHub
+\item[]\textbf{HPC, Cloud \& Containers:} SLURM, AWS (S3), Ceph object storage, Docker, Singularity/Apptainer, Kubernetes, Globus, batch processing, HPC workflow design
+\item[]\textbf{Data Engineering:} ETL pipelines, large-scale data processing, data validation and quality control, data harmonization, EHR integration, reproducible research workflows, workflow automation
+\item[]\textbf{Neuroimaging \& Scientific Computing:} NIfTI, DICOM, BIDS, FreeSurfer, FSL, Connectome Workbench, MRI segmentation, ABCD/HCP neuroimaging datasets, deep-learning inference workflows
+\item[]\textbf{Machine Learning \& Statistics:} LightGBM, scikit-learn, predictive modeling, deep learning, repeated cross-validation, calibration, bootstrap/permutation inference, SHAP, causal inference and discovery
+\item[]\textbf{Infrastructure \& Observability:} Ansible/AWX, Grafana, Prometheus, Terraform, Datadog, CI/CD (GitHub Actions, CircleCI)
+\end{itemize}\end{justify}
+\vspace{-1mm}
+
 \vspace{0mm}
-\section{Education}
-
-\resumeSubHeadingListStart
-\resumeEdu
-{University of Montana - Missoula, MT} 
-{Bachelors of Arts in Physics} 
-{Aug 2013 - May 2017} 
-{\href{https://www.umt.edu/physics-astronomy/}{umt.edu/physics-astronomy}}
-\resumeSubHeadingListEnd
-\vspace{0mm}
-
-\vspace{-2mm}
-
 \section{Research Experience}
 \resumeSubHeadingListStart
 
@@ -180,15 +179,14 @@
 {Jan 2021 - Apr 2024}
 {Minneapolis, MN (Remote)}
 \resumeItemListStart
-\item[$\bullet$] Developed Python wrappers leveraging AWS S3 storage and SLURM optimization to accelerate image processing up to 12×.
-\item[$\bullet$] Engineered a containerized infant MRI segmentation application achieving 600× faster processing and improved segmentation accuracy.
-\item[$\bullet$] Built ETL pipelines for petabyte-scale neuroimaging datasets, emphasizing reproducibility and quality control.
+\item[$\bullet$] Developed Python and Bash workflow-management wrappers leveraging AWS S3 and Ceph object storage and SLURM high-performance computing (HPC) to standardize and scale neuroimaging data-processing pipelines, accelerating image processing up to 12×.
+\item[$\bullet$] Engineered a containerized deep-learning infant MRI segmentation pipeline using Docker/Singularity, achieving 600× faster processing and improved segmentation accuracy.
+\item[$\bullet$] Built and maintained ETL pipelines for petabyte-scale, multi-site neuroimaging datasets, including NIfTI and DICOM medical imaging data, with automated data validation, quality control, and reproducible processing workflows.
 \item[$\bullet$] Authored laboratory documentation and technical curriculum for neuroimaging software and HPC workflows.
 \item[$\bullet$] Co-designed and instructed a three-month MRI Data Processing Workshop covering Bash, Linux, SLURM, BIDS, containers, and MRI analysis workflows.
-\item[$\bullet$] Founded and led weekly Bash training sessions for research staff and students.
-\item[$\bullet$] Founded and organized the interdisciplinary "Brainy Brains" seminar series to promote neuroscience learning across research disciplines.
 \item[$\bullet$] Mentored two University of Minnesota UROP/URA students in MRI data processing and reproducible workflows using ABCD and HCP-YA datasets.
-\item[$\bullet$] Processed and maintained workflows for major neuroimaging cohorts including ABCD, BCP, HCP-Development, HCP-Young Adult, ABIDE I, and ABIDE II.
+\item[$\bullet$] Processed and maintained reproducible workflows for large-scale, multi-site neuroimaging studies and consortia including ABCD, BCP, HCP-Development, HCP-Young Adult, ABIDE I, and ABIDE II.
+\item[$\bullet$] Collaborated with academic investigators, research staff, and software developers across multi-site neuroimaging studies to troubleshoot data-processing workflows, resolve data-quality issues, and support reproducible research.
 \resumeItemListEnd
 
 \resumeExp
@@ -250,87 +248,126 @@
 \resumeSubHeadingListEnd
 \vspace{-2mm}
 
-\section{Teaching \& Mentoring}
+%-----------PROJECTS-----------------
+\section{Selected Software Projects}
+\resumeItemListStart
+\resumeProjectSectionHeading{Research Pipelines}
 \resumeSubHeadingListStart
-
-\resumeExp
-{University of Minnesota Undergraduate Research Opportunities Program (UROP/URA)}
-{Undergraduate Research Mentor}
-{2023}
-{Minneapolis, MN}
+\resumeProject
+{GIS Analysis Pipeline}
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences}
+{2026}
+{[Research Software]}
 \resumeItemListStart
-\item[$\bullet$] Mentored two undergraduate researchers in neuroimaging data processing.
-\item[$\bullet$] Trained students to process Human Connectome Project Young Adult (HCP-YA) and ABCD MRI datasets.
-\item[$\bullet$] Introduced reproducible workflows and quality-control procedures for large neuroimaging datasets.
+\item[$\bullet$] Developed a reproducible geospatial analysis pipeline integrating county- and tract-level social determinants of health with electronic health record data.
+\item[$\bullet$] Automated geocoding quality control, FIPS recovery, census tract matching, and feature engineering using Python and external GIS APIs.
+\item[$\bullet$] Supported publication-quality geospatial analyses and interactive visualizations for psychiatric epidemiology research.
+\item[$\bullet$] Integrated Census tract and county-level indices (e.g., SVI, ADI) with electronic health record data to support reproducible spatial epidemiology analyses.
 \resumeItemListEnd
 
-\resumeExp
-{Co-Instructor, MRI Data Processing Workshop}
-{Masonic Institute for the Developing Brain, University of Minnesota}
-{2022}
-{Minneapolis, MN}
+\resumeProject
+{Clinical Prediction Analysis Framework}
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences}
+{2026}
+{[Research Software]}
 \resumeItemListStart
-\item[$\bullet$] Co-designed and taught a three-month workshop introducing students and researchers to neuroimaging data processing and high-performance computing.
-\item[$\bullet$] Developed instructional materials covering Bash/Linux, SLURM, S3 storage, BIDS standards, containers, quality assurance, and reproducible MRI processing workflows.
-\item[$\bullet$] Held weekly office hours and provided technical mentorship to participants from diverse academic backgrounds.
-\item[$\bullet$] The workshop was later adapted into an official University of Minnesota credit-bearing course.
+\item[$\bullet$] Transformed an existing psychiatric prediction pipeline into a modular, reproducible research framework by expanding functionality, standardizing workflows, and improving usability in accordance with FAIR software principles.
+\item[$\bullet$] Implemented automated repeated stratified cross-validation, LightGBM modeling, probability calibration, bootstrap/permutation robustness checks, SHAP interpretation, and publication-ready statistical reporting.
+\item[$\bullet$] Supported multiple psychiatric prediction studies through reusable, publication-ready software workflows.
 \resumeItemListEnd
 
-\resumeExp
-{Mathematics Teacher}
-{Imagine Prep Surprise}
-{Jul 2017 - Jul 2018}
-{Surprise, AZ}
+\resumeProject
+{Causal Learning Pipeline}
+{University of Minnesota Department of Psychiatry \& Behavioral Sciences}
+{2026}
+{[Research Software]}
 \resumeItemListStart
-\item[$\bullet$] Taught Algebra II, Precalculus, Calculus, and Cambridge AS/A-Level Mathematics to high school students.
-\item[$\bullet$] Developed lesson plans, assessments, and instructional materials.
-\item[$\bullet$] Contributed to improving Algebra proficiency from approximately 11\% to 70\% during my tenure.
+\item[$\bullet$] Built a reusable Python pipeline integrating multiple causal discovery algorithms, graph visualization, effect estimation, and reproducible statistical workflows for psychiatric EHR analyses.
+\item[$\bullet$] Standardized preprocessing, graph generation, and downstream statistical analyses to support consistent comparison across causal learning methods.
 \resumeItemListEnd
 
-\resumeExp
-{Teaching Assistant, Observational Astronomy}
-{University of Montana}
-{Aug 2016 - Dec 2016}
-{Missoula, MT}
+\resumeProject
+{SLURM Wrappers}
+{High-Performance Computing S3 and Disk SLURM-Compliant Wrappers}
+{2021 - 2024}
+{\href{https://github.com/DCAN-Labs/SLURM_wrappers}{github.com/DCAN-Labs/SLURM\_wrappers}}
 \resumeItemListStart
-\item[$\bullet$] Assisted instruction for the undergraduate Observational Astronomy course.
-\item[$\bullet$] Supervised observing sessions and telescope operations.
-\item[$\bullet$] Delivered a 45-minute lecture on Python-based astronomical data reduction.
-\item[$\bullet$] Assisted students with programming and data analysis assignments.
+\item[$\bullet$] Developed reusable Bash/Python workflow-management wrappers for scheduling and executing scalable data-processing pipelines on SLURM HPC systems with local disk and S3/Ceph object storage.
 \resumeItemListEnd
 
-\resumeExp
-{Mathematics Instructor}
-{Huntington Learning Center}
-{Jul 2019 - Oct 2019}
-{Plymouth, MN}
+\resumeProject
+{CABINET} %Project Name
+{Container-Linking Wrapper} %Project Name, Location Name
+{2022 - 2023} %Event Dates
+{\href{https://github.com/DCAN-Labs/CABINET}{github.com/DCAN-Labs/CABINET}} %Website
 \resumeItemListStart
-\item[$\bullet$] Provided one-on-one mathematics tutoring for K-12 students.
-\item[$\bullet$] Adapted instruction to students with varying backgrounds and learning styles.
+\item[$\bullet$] Python-based workflow tool for linking and executing containerized neuroimaging pipelines using Docker/Singularity, supporting modular and reproducible processing across research workflows.
 \resumeItemListEnd
 
-\resumeExp
-{Mathematics Instructor}
-{Tutor Doctor}
-{Jan 2019 - May 2019}
-{Loveland, CO}
+\resumeProject
+{BIBSNet}
+{Infant MRI Brain Segmentation Application}
+{2022 - 2023}
+{\href{https://github.com/DCAN-Labs/BIBSnet}{github.com/DCAN-Labs/BIBSnet}}
 \resumeItemListStart
-\item[$\bullet$] Delivered individualized mathematics tutoring to middle and high school students.
-\item[$\bullet$] Prepared students for coursework and standardized examinations.
+\item[$\bullet$] Containerized deep-learning infant MRI segmentation application for reproducible neuroimaging workflows; achieved 600× faster processing and +53\% segmentation accuracy.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeProjectSectionHeading{Research Infrastructure}
+\resumeSubHeadingListStart
+\resumeProject
+{ABCD Study Collection 3165 Data Processing}
+{NIH Data Archive (NDA)}
+{2021 - 2024}
+{\href{https://collection3165.readthedocs.io/en/stable/}{collection3165.readthedocs.io}}
+\resumeItemListStart
+\item[$\bullet$] Community dataset enabling access to petabytes of processed/unprocessed MRI data under BIDS standards.
 \resumeItemListEnd
 
-\resumeExp
-{Planetarium Outreach Educator}
-{University of Montana Physics Department}
-{Aug 2015 - May 2017}
-{Missoula, MT}
+\resumeProject
+{DCAN Labs Informational Guide} %Project Name
+{Minnesota Supercomputing Institute Data Engineering Documentation} %Project Name, Location Name
+{2022 - 2024} %Event Dates
+{\href{https://dcan-labs-informational-guide.readthedocs.io/en/latest/}{dcan-labs-informational-guide.readthedocs.io}} %Website
 \resumeItemListStart
-\item[$\bullet$] Presented public planetarium shows introducing astronomy and physics concepts.
-\item[$\bullet$] Communicated scientific concepts to audiences of all ages.
-\item[$\bullet$] Supported departmental outreach activities to promote STEM education.
+\item[$\bullet$] Comprehensive, continually-supported documentation of usage of the Minnesota Supercomputing Institute to process, analyze, and transfer MRI data.
+\resumeItemListEnd
+
+\resumeProject
+{CoreWeave Internal Documentation}
+{CoreWeave, Inc.}
+{2024}
+{[Proprietary]}
+\resumeItemListStart
+\item[$\bullet$] Initiated and built company-wide documentation from the ground up, replacing scattered one-off documents with an organized, centralized Notion knowledge base covering terminology, SOPs, and team workflows.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeProjectSectionHeading{Independent Projects}
+\resumeSubHeadingListStart
+\resumeProject
+{Waste Not}
+{Sustainability Application}
+{2018 - 2022}
+{[Independent Project]}
+\resumeItemListStart
+\item[$\bullet$] Designed and developed a sustainability application using a nationwide, self-curated recycling database created through large-scale web scraping, data normalization, and categorization.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+\resumeItemListEnd
+
+\vspace{0mm}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEdu
+{University of Montana - Missoula, MT}
+{Bachelor of Arts in Physics}
+{Aug 2013 - May 2017}
+{\href{https://www.umt.edu/physics-astronomy/}{umt.edu/physics-astronomy}}
+\resumeSubHeadingListEnd
+\vspace{0mm}
 \vspace{-2mm}
 
 \section{Publications}
@@ -377,127 +414,46 @@
 \resumeSubHeadingListEnd
 \vspace{-2mm}
 
-\section{Selected Software Projects}
-\resumeItemListStart
-\resumeProjectSectionHeading{Research Pipelines}
+\section{Research Teaching \& Mentoring}
 \resumeSubHeadingListStart
-\resumeProject
-{GIS Analysis Pipeline} 
-{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
-{2026} 
-{[Research Software]}
+
+\resumeExp
+{University of Minnesota Undergraduate Research Opportunities Program (UROP/URA)}
+{Undergraduate Research Mentor}
+{2023}
+{Minneapolis, MN}
 \resumeItemListStart
-\item[$\bullet$] Developed a reproducible geospatial analysis pipeline integrating county- and tract-level social determinants of health with electronic health record data.
-\item[$\bullet$] Automated geocoding quality control, FIPS recovery, census tract matching, and feature engineering using Python and external GIS APIs.
-\item[$\bullet$] Supported publication-quality geospatial analyses and interactive visualizations for psychiatric epidemiology research.
-\item[$\bullet$] Integrated Census tract and county-level indices (e.g., SVI, ADI) with electronic health record data to support reproducible spatial epidemiology analyses.
+\item[$\bullet$] Mentored two undergraduate researchers in neuroimaging data processing.
+\item[$\bullet$] Trained students to process Human Connectome Project Young Adult (HCP-YA) and ABCD MRI datasets.
+\item[$\bullet$] Introduced reproducible workflows and quality-control procedures for large neuroimaging datasets.
 \resumeItemListEnd
 
-\resumeProject
-{Clinical Prediction Analysis Framework} 
-{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
-{2026} 
-{[Research Software]}
+\resumeExp
+{Co-Instructor, MRI Data Processing Workshop}
+{Masonic Institute for the Developing Brain, University of Minnesota}
+{2022}
+{Minneapolis, MN}
 \resumeItemListStart
-\item[$\bullet$] Transformed an existing psychiatric prediction pipeline into a modular, reproducible research framework by expanding functionality, standardizing workflows, and improving usability in accordance with FAIR software principles.
-\item[$\bullet$] Implemented automated repeated stratified cross-validation, LightGBM modeling, probability calibration, bootstrap/permutation robustness checks, SHAP interpretation, and publication-ready statistical reporting.
-\item[$\bullet$] Supported multiple psychiatric prediction studies through reusable, publication-ready software workflows.
+\item[$\bullet$] Co-designed and taught a three-month workshop introducing students and researchers to neuroimaging data processing and high-performance computing.
+\item[$\bullet$] Developed instructional materials covering Bash/Linux, SLURM, S3 storage, BIDS standards, containers, quality assurance, and reproducible MRI processing workflows.
+\item[$\bullet$] Held weekly office hours and provided technical mentorship to participants from diverse academic backgrounds.
+\item[$\bullet$] The workshop was later adapted into an official University of Minnesota credit-bearing course.
 \resumeItemListEnd
 
-\resumeProject
-{Causal Learning Pipeline} 
-{University of Minnesota Department of Psychiatry \& Behavioral Sciences} 
-{2026} 
-{[Research Software]}
+\resumeExp
+{Teaching Assistant, Observational Astronomy}
+{University of Montana}
+{Aug 2016 - Dec 2016}
+{Missoula, MT}
 \resumeItemListStart
-\item[$\bullet$] Built a reusable Python pipeline integrating multiple causal discovery algorithms, graph visualization, effect estimation, and reproducible statistical workflows for psychiatric EHR analyses.
-\item[$\bullet$] Standardized preprocessing, graph generation, and downstream statistical analyses to support consistent comparison across causal learning methods.
-\resumeItemListEnd
-
-\resumeProject
-{SLURM Wrappers} 
-{High-Performance Computing S3 and Disk SLURM-Compliant Wrappers} 
-{2021 - 2024} 
-{\href{https://github.com/DCAN-Labs/SLURM_wrappers}{github.com/DCAN-Labs/SLURM\_wrappers}}
-\resumeItemListStart
-\item[$\bullet$] Bash/Python wrappers adaptable to any SLURM-based data pipeline.
-\resumeItemListEnd
-
-\resumeProject
-{CABINET} %Project Name
-{Container-Linking Wrapper} %Project Name, Location Name
-{2022 - 2023} %Event Dates
-{\href{https://github.com/DCAN-Labs/CABINET}{github.com/DCAN-Labs/CABINET}} %Website
-\resumeItemListStart
-\item[$\bullet$] Python-based universal container-linking wrapper employing FAIR principles.
-\resumeItemListEnd
-
-\resumeProject
-{BIBSNet} 
-{Infant MRI Brain Segmentation Application} 
-{2022 - 2023} 
-{\href{https://github.com/DCAN-Labs/BIBSnet}{github.com/DCAN-Labs/BIBSnet}}
-\resumeItemListStart
-\item[$\bullet$] Containerized infant MRI application; achieved 600x faster processing and +53\% accuracy.
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeProjectSectionHeading{Research Infrastructure}
-\resumeSubHeadingListStart
-\resumeProject
-{ABCD Study Collection 3165 Data Processing} 
-{NIH Data Archive (NDA)} 
-{2021 - 2024} 
-{\href{https://collection3165.readthedocs.io/en/stable/}{collection3165.readthedocs.io}}
-\resumeItemListStart
-\item[$\bullet$] Community dataset enabling access to petabytes of processed/unprocessed MRI data under BIDS standards.
-\resumeItemListEnd
-
-\resumeProject
-{DCAN Labs Informational Guide} %Project Name
-{Minnesota Supercomputing Institute Data Engineering Documentation} %Project Name, Location Name
-{2022 - 2024} %Event Dates
-{\href{https://dcan-labs-informational-guide.readthedocs.io/en/latest/}{dcan-labs-informational-guide.readthedocs.io}} %Website
-\resumeItemListStart
-\item[$\bullet$] Comprehensive, continually-supported documentation of usage of the Minnesota Supercomputing Institute to process, analyze, and transfer MRI data.
-\resumeItemListEnd
-
-\resumeProject
-{CoreWeave Internal Documentation} 
-{CoreWeave, Inc.} 
-{2024} 
-{[Proprietary]}
-\resumeItemListStart
-\item[$\bullet$] Initiated and built company-wide documentation from the ground up, replacing scattered one-off documents with an organized, centralized Notion knowledge base covering terminology, SOPs, and team workflows.
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\resumeProjectSectionHeading{Independent Projects}
-\resumeSubHeadingListStart
-\resumeProject
-{Waste Not} 
-{Sustainability Application} 
-{2018 - 2022} 
-{[Independent Project]}
-\resumeItemListStart
-\item[$\bullet$] Designed and developed a sustainability application using a nationwide, self-curated recycling database created through large-scale web scraping, data normalization, and categorization.
+\item[$\bullet$] Assisted instruction for the undergraduate Observational Astronomy course.
+\item[$\bullet$] Supervised observing sessions and telescope operations.
+\item[$\bullet$] Delivered a 45-minute lecture on Python-based astronomical data reduction.
+\item[$\bullet$] Assisted students with programming and data analysis assignments.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\resumeItemListEnd
-
-\section{Technical Skills}
-\vspace{0.7mm}
-\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.2mm, topsep=1.5mm]\small
-\item[]\textbf{Programming:} Python, Bash, UNIX/Linux, Git/GitHub, LaTeX, Docker, Singularity, SQL
-\item[]\textbf{Infrastructure \& HPC:} AWS (S3), Ceph, SLURM, Kubernetes, batch processing, data validation, Globus, Grafana, Prometheus, HPC workflow design
-\item[]\textbf{Machine Learning \& Statistics:} logistic regression, predictive modeling, LightGBM, calibration (Platt/isotonic), repeated stratified cross-validation, bootstrap/permutation inference, FDR correction (Benjamini-Hochberg), SHAP interpretability, ROC-AUC/PR-AUC/Brier metrics, causal inference \& discovery
-\item[]\textbf{Scientific Computing:} neuroimaging/MRI segmentation, astronomical image processing (FITS, Astrometry.net, Astropy, Photutils), CCD calibration, differential photometry, time-domain imaging, deep learning inference workloads and compute planning, GIS analysis, QGIS visualization, geocoding/FIPS recovery
-\item[]\textbf{Data Engineering:} ETL pipelines, EHR integration, census tract and county-level feature engineering, data harmonization, reproducible research workflows, workflow automation
-\item[]\textbf{Collaboration:} Jira, Linear, Kanban, Agile/Scrum, SOP documentation, Slack, Microsoft Teams, Google Workspace, Box, Salesforce API automation, compliant web scraping
-\item[]\textbf{Additional Exposure:} Matlab, R, IDL, JavaScript/Node.js, Go, Ansible/AWX, RedHat, ReadTheDocs, Google Apps Script, GCP, Terraform, Datadog, CI/CD (GitHub Actions, CircleCI)
-\end{itemize}\end{justify}
-\vspace{-1mm}
+\vspace{-2mm}
 
 \section{Leadership \& Service}
 \begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, labelsep=1.2mm, itemsep=2.5mm, topsep=2mm]\small
